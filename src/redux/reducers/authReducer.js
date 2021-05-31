@@ -5,7 +5,7 @@ const initialState = {
     error:{}
 }
 
-export default (state = initialState, action) => {
+const authReducer = (state = initialState, action) => {
     switch(action.type){
         case "LOGGED_IN":   
         return {
@@ -31,3 +31,5 @@ export default (state = initialState, action) => {
             return state
     }
 }
+
+export default authReducer
