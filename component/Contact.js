@@ -7,28 +7,33 @@ import { SimpleLineIcons } from '@expo/vector-icons';
 
 export default function contact({name, phone}) {
     return (
-        <View style={styels.contactsContainer}>
-             <Image style={styels.image} source={require('../assets/profile.jpg')}  />
-             
-             <View style={styels.infoContainer}>
-                <Text style={styels.name} numberOfLines={1}>{name}</Text>
-                <Text>{phone}</Text>
-             </View>
+      <View style={styels.contactsContainer}>
+        <Image style={styels.image} source={require("../assets/profile.jpg")} />
 
-             <View style={styels.icon}>
-                <MaterialIcons name="local-phone" size={25} color="#009cf5" />
-             </View>
-
-             <View style={styels.icon}>
-                <MaterialCommunityIcons name="message-processing" size={25} color="#009cf5" />
-             </View>
-
-             <View style={styels.icon}>
-                <SimpleLineIcons name="options-vertical" size={25} color="#a8a8a8" />
-             </View>
-            
+        <View style={styels.infoContainer}>
+          <Text style={styels.name} numberOfLines={1}>
+            {name}
+          </Text>
+          <Text>{phone}</Text>
         </View>
-    )
+
+        <View style={styels.icon}>
+          <MaterialIcons name="local-phone" size={25} color="#009cf5" />
+        </View>
+
+        <View style={styels.icon}>
+          <MaterialCommunityIcons
+            name="message-processing"
+            size={25}
+            color="#009cf5"
+          />
+        </View>
+
+        <View style={styels.icon}>
+          <SimpleLineIcons name="options-vertical" size={25} color="#a8a8a8" />
+        </View>
+      </View>
+    );
 }
 
 
@@ -38,9 +43,6 @@ const styels = StyleSheet.create({
         marginHorizontal: 20,
         alignItems: 'center',
         marginVertical: 15,
-        // borderBottomWidth: 1,
-        // marginBottom: 2,
-        // borderBottomColor: 'silver'
     },
     image: {
         width: 50, 
